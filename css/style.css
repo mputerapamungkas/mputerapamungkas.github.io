@@ -264,7 +264,7 @@ canvas {
 .hero .name,
 .hero .tittle {
   color: #fff;
-  font-family: "Montserrat";
+  ffont-family: 'Roboto', sans-serif;
 }
 
 .hero .name {
@@ -284,7 +284,7 @@ canvas {
 .hero .sosmed li {
   display: inline;
   -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+          box-sizing: border-box;
   padding: 10px;
 }
 
@@ -307,6 +307,7 @@ footer .footer-text {
   color: #fff;
   text-align: center;
   font-size: 17px;
+  font-family: 'Roboto', sans-serif;
 }
 
 @media screen and (max-width: 1000px) {
@@ -336,20 +337,20 @@ footer .footer-text {
   white-space: nowrap;
   width: 10.9em;
   -webkit-animation: type 2s steps(17), blink 1s linear infinite;
-  animation: type 2s steps(17), blink 1s linear infinite;
+          animation: type 2s steps(17), blink 1s linear infinite;
   border-right: .1em solid;
 }
 
 .text-typing:nth-child(2) {
   width: 8.5em;
   -webkit-animation: type2 4s steps(19), blink 1s linear infinite;
-  animation: type2 4s steps(19), blink 1s linear infinite;
+          animation: type2 4s steps(19), blink 1s linear infinite;
 }
 
 .text-typing:nth-child(3) {
   width: 8.5em;
   -webkit-animation: type2 8s steps(19), blink 1s linear infinite;
-  animation: type2 8s steps(19), blink 1s linear infinite;
+          animation: type2 8s steps(19), blink 1s linear infinite;
 }
 
 @-webkit-keyframes type {
@@ -368,11 +369,9 @@ footer .footer-text {
   0% {
     width: 0;
   }
-
   50% {
     width: 0;
   }
-
   100% {
     width: 100;
   }
@@ -382,38 +381,31 @@ footer .footer-text {
   0% {
     width: 0;
   }
-
   50% {
     width: 0;
   }
-
   100% {
     width: 100;
   }
 }
 
 @-webkit-keyframes blink {
-
   0%,
   100% {
     border-color: transparent;
   }
-
   50% {
     border-color: #fff;
   }
 }
 
 @keyframes blink {
-
   0%,
   100% {
     border-color: transparent;
   }
-
   50% {
     border-color: #fff;
   }
 }
-
 /*# sourceMappingURL=style.css.map */
