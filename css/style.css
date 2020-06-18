@@ -1,411 +1,140 @@
-/* =============================================================================
-   HTML5 CSS Reset Minified - Eric Meyer
-   ========================================================================== */
-html,
-body,
-div,
-span,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-abbr,
-address,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-ins,
-kbd,
-q,
-samp,
-small,
-strong,
-sub,
-sup,
-var,
-b,
-i,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-canvas,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section,
-summary,
-time,
-mark,
-audio,
-video {
+/* My Own CSS
+by Mochamad Putera Pamungkas */
+/*Reset CSS */
+* {
   margin: 0;
   padding: 0;
-  border: 0;
-  outline: 0;
-  font-size: 100%;
-  vertical-align: baseline;
-  background: transparent;
 }
 
 body {
-  line-height: 1;
+  background-color: #333;
 }
 
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section {
-  display: block;
-}
-
-nav ul {
-  list-style: none;
-}
-
-blockquote,
-q {
-  quotes: none;
-}
-
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
-  content: none;
-}
-
-a {
-  margin: 0;
-  padding: 0;
-  font-size: 100%;
-  vertical-align: baseline;
-  background: transparent;
-  text-decoration: none;
-}
-
-mark {
-  background-color: #ff9;
-  color: #000;
-  font-style: italic;
-  font-weight: bold;
-}
-
-del {
-  text-decoration: line-through;
-}
-
-abbr[title],
-dfn[title] {
-  border-bottom: 1px dotted;
-  cursor: help;
-}
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-hr {
-  display: block;
-  height: 1px;
-  border: 0;
-  border-top: 1px solid #ccc;
-  margin: 1em 0;
-  padding: 0;
-}
-
-input,
-select {
-  vertical-align: middle;
-}
-
-li {
-  list-style: none;
-}
-
-/* =============================================================================
-      My CSS
-      ========================================================================== */
-/* ---- base ---- */
-html,
-body {
+/*Container global */
+.container {
   width: 100%;
-  height: 100%;
-  background: #111;
-}
-
-html {
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-}
-
-body {
-  font: normal 75% Arial, Helvetica, sans-serif;
-}
-
-canvas {
-  display: block;
-  vertical-align: bottom;
-}
-
-/* ---- stats.js ---- */
-.count-particles {
-  background: #000022;
-  position: absolute;
-  top: 48px;
-  left: 0;
-  width: 80px;
-  color: #13E8E9;
-  font-size: .8em;
-  text-align: left;
-  text-indent: 4px;
-  line-height: 14px;
-  padding-bottom: 2px;
-  font-family: Helvetica, Arial, sans-serif;
-  font-weight: bold;
-}
-
-.js-count-particles {
-  font-size: 1.1em;
-}
-
-#stats,
-.count-particles {
-  -webkit-user-select: none;
-  margin-top: 5px;
-  margin-left: 5px;
-}
-
-#stats {
-  border-radius: 3px 3px 0 0;
-  overflow: hidden;
-}
-
-.count-particles {
-  border-radius: 0 0 3px 3px;
-}
-
-/* ---- particles.js container ---- */
-#particles-js {
-  width: 100%;
-  height: 100%;
-  background-color: #141414;
-  background-image: url("");
-  background-size: cover;
-  background-position: 50% 50%;
-  background-repeat: no-repeat;
-}
-
-/* My Custom CSS */
-.bg-dk {
-  background-color: #222222;
-}
-
-.hero {
-  width: 500px;
-  height: 350px;
   margin: auto;
-  position: absolute;
-  top: 25%;
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: "content content content" "footer footer footer";
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+}
+
+/* Navbar */
+.nav-background {
+  background-color: #1b1b1b;
+  position: fixed;
   left: 0;
   right: 0;
-  padding: 50px;
+}
+
+.nav-background .nav-container {
+  width: 1020px;
+  margin: auto;
+}
+
+.nav-background .nav-container .menu {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 2fr;
+      grid-template-columns: 1fr 2fr;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 15px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.nav-background .nav-container .menu .brand {
+  font-family: "Nunito", sans-serif;
+  color: #fff;
+}
+
+.nav-background .nav-container .menu .menu-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  list-style: none;
+}
+
+.nav-background .nav-container .menu .menu-list a {
+  font-family: "Nunito", sans-serif;
+  text-decoration: none;
+  color: #fff;
+  margin-left: 30px;
+  display: block;
+  text-align: end;
+}
+
+/* Content */
+.content {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: content;
   text-align: center;
 }
 
-.hero .img-profile {
-  width: 150px;
-  height: 150px;
-  background-image: url("../images/profile.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  margin: auto;
-  border-radius: 100%;
+.content .img {
+  margin-top: 170px;
+  overflow: hidden;
 }
 
-.hero .name,
-.hero .tittle {
+.content .img img {
+  width: 200px;
+  height: 200px;
+  border-radius: 100px;
+}
+
+.content .text-content {
   color: #fff;
-  ffont-family: 'Roboto', sans-serif;
+  font-family: "Nunito", sans-serif;
+  margin-top: 15px;
 }
 
-.hero .name {
-  font-size: 20px;
+.content .text-content h2:nth-child(1) {
+  font-size: 2em;
+}
+
+.content .text-content h2:nth-child(2) {
+  font-size: 1em;
+}
+
+.content .text-content .sosmed {
   margin-top: 10px;
 }
 
-.hero .tittle {
-  font-size: 17px;
-  margin-top: -4px;
-}
-
-.hero .sosmed {
-  margin-top: 10px;
-}
-
-.hero .sosmed li {
+.content .text-content .sosmed li {
   display: inline;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  padding: 10px;
+  margin: 10px;
 }
 
-.hero .sosmed .fw-color {
-  color: #ffff;
+.content .text-content .sosmed li .fw-color {
+  color: #fff;
 }
 
 /* footer */
 footer {
-  width: 100%;
-  height: 50px;
-  position: absolute;
-  top: 90%;
-  left: 0;
-  right: 0;
-  padding: 10px;
-}
-
-footer .footer-text {
-  color: #fff;
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: footer;
+  margin-top: 30px;
   text-align: center;
-  font-size: 17px;
-  font-family: 'Roboto', sans-serif;
+  padding: 20px;
+  font-family: "Roboto Mono", monospace;
+  color: #fff;
 }
 
-@media screen and (max-width: 1000px) {
-  .hero {
-    width: 100%;
-  }
-}
-
-@media screen and (max-width: 700px) {
-  .hero {
-    width: 100%;
-  }
-}
-
-@media screen and (max-width: 1080px) {
-  .hero {
-    width: 100%;
-  }
-}
-
-/* Text typing */
-.text-typing {
-  font-size: 18px;
-  position: relative;
-  top: 5px;
-  overflow: hidden;
-  white-space: nowrap;
-  width: 10.9em;
-  -webkit-animation: type 2s steps(17), blink 1s linear infinite;
-          animation: type 2s steps(17), blink 1s linear infinite;
-  border-right: .1em solid;
-}
-
-.text-typing:nth-child(2) {
-  width: 8.5em;
-  -webkit-animation: type2 4s steps(19), blink 1s linear infinite;
-          animation: type2 4s steps(19), blink 1s linear infinite;
-}
-
-.text-typing:nth-child(3) {
-  width: 8.5em;
-  -webkit-animation: type2 8s steps(19), blink 1s linear infinite;
-          animation: type2 8s steps(19), blink 1s linear infinite;
-}
-
-@-webkit-keyframes type {
-  from {
-    width: 0;
-  }
-}
-
-@keyframes type {
-  from {
-    width: 0;
-  }
-}
-
-@-webkit-keyframes type2 {
-  0% {
-    width: 0;
-  }
-  50% {
-    width: 0;
-  }
-  100% {
-    width: 100;
-  }
-}
-
-@keyframes type2 {
-  0% {
-    width: 0;
-  }
-  50% {
-    width: 0;
-  }
-  100% {
-    width: 100;
-  }
-}
-
-@-webkit-keyframes blink {
-  0%,
-  100% {
-    border-color: transparent;
-  }
-  50% {
-    border-color: #fff;
-  }
-}
-
-@keyframes blink {
-  0%,
-  100% {
-    border-color: transparent;
-  }
-  50% {
-    border-color: #fff;
+/* Responsive Breakpoint */
+@media screen and (max-width: 600px) {
+  .content {
+        grid-template-areas: "content" "footer";
   }
 }
 /*# sourceMappingURL=style.css.map */
