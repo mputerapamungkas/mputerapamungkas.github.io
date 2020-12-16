@@ -1,85 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>mputerapamungkas</title>
-    <link rel="stylesheet" href="./css/style.css" />
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.10.2/css/all.css"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,600;1,400&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap"
-      rel="stylesheet"
-    />
-  </head>
 
-  <body>
-    <!-- Navbar -->
-    <div class="nav-background">
-      <div class="nav-container">
-        <nav class="menu">
-          <div class="brand">
-            <h3>mputerapamungkas.co</h3>
-          </div>
-          <ul class="menu-list">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Portfolio</a></li>
-            <li><a href="#">Contact</a></li>
-          </ul>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mputerapamungkas - world</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header id="navbar">
+        <nav class="navbar-container container">
+            <a href="/" class="home-link">
+                <div class="navbar-logo">
+                    mputerpamungkas.co
+                </div>
+            </a>
+            <button type="button" class="navbar-toggle" aria-label="Open navigation menu">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <div class="navbar-menu">
+                <ul class="navbar-links">
+                    <li class="navbar-item"><a href="#" class="navbar-link">Home</a></li>
+                    <li class="navbar-item"><a href="#abouts" class="navbar-link">About</a></li>
+                    <li class="navbar-item"><a href="#" class="navbar-link">Skills</a></li>
+                    <li class="navbar-item"><a href="#" class="navbar-link">Portfolio</a></li>
+                    <li class="navbar-item"><a href="#" class="navbar-link">Contact</a></li>
+                </ul>
+            </div>
         </nav>
-      </div>
-    </div>
-    <!-- End Navbar -->
-
-    <!-- Content -->
-    <div class="container">
-      <div class="content">
-        <div class="img">
-          <img src="./images/profile.jpg" alt="" />
+    </header>
+    <section id="hero-parrent">
+        <div class="hero-container container">
+            <img src="img/hexagon.svg" class="hexagon">
+            <div class="welcometxt">
+                <h2>WELCOME TO <br>
+                    MY SPACESHIP!</h2>
+            </div>
+            <!-- <img src="img/rocket.svg" alt="Rocket" class="rocket"> -->
         </div>
-        <div class="text-content">
-          <h2>M Putera Pamungkas</h2>
-          <h2>Junior Front-end Web & UI Designer</h2>
-          <ul class="sosmed">
-            <li>
-              <a
-                href="https://www.facebook.com/mputerapamungkas"
-                target="_blank"
-                ><i class="fab fa-facebook-square fa-2x fw-color"></i
-              ></a>
-            </li>
-            <li>
-              <a href="https://twitter.com/mputerapamngks" target="_blank"
-                ><i class="fab fa-twitter fa-2x fw-color" target="_blank"></i
-              ></a>
-            </li>
-            <li>
-              <a href="https://github.com/mputerapamungkas" target="_blank"
-                ><i class="fab fa-github fa-2x fw-color"></i
-              ></a>
-            </li>
-            <li>
-              <a href="https://www.instagram.com/mputerapamungkas/"
-                ><i class="fab fa-instagram fa-2x fw-color"></i
-              ></a>
-            </li>
-          </ul>
+    </section>
+    <section id="abouts">
+        <div class="about-container container">
+            <div class="profile">
+                <img src="img/profile.svg" alt="Profile">
+            </div>
+            <div class="me">
+                <h2>About Me ?</h2>
+                <p>Hello! My name is Mochamad Putera Pamungkas. I am 20 years old. I am graduated in computer science at
+                    smk kencana bandung. i have some capabilites such as ui design and basic knowledge at IT support.
+                </p>
+                <button class="resume">View Resume</button>
+            </div>
         </div>
-      </div>
-    </div>
-    <!-- End Content -->
+    </section>
+    <section id="footers">
+        <div class="footer">Copyright &copy; 2020, Made with love by Mochamad Putera Pamungkas.</div>
+    </section>
+</body>
+<script>
+    const navbar = document.getElementById("navbar");
+    const navbarToggle = navbar.querySelector(".navbar-toggle");
 
-    <!-- Footer -->
-    <div class="container">
-      <footer>Copyright &copy; 2020, By Mochamad Putera Pamungkas</footer>
-    </div>
-    <!-- End Footer -->
-  </body>
+    function openMobileNavbar() {
+        navbar.classList.add("opened");
+        navbarToggle.setAttribute("aria-label", "Close navigation menu.");
+    }
+
+    function closeMobileNavbar() {
+        navbar.classList.remove("opened");
+        navbarToggle.setAttribute("aria-label", "Open navigation menu.");
+    }
+
+    navbarToggle.addEventListener("click", () => {
+        if (navbar.classList.contains("opened")) {
+            closeMobileNavbar();
+        } else {
+            openMobileNavbar();
+        }
+    });
+
+    const navbarMenu = navbar.querySelector(".navbar-menu");
+    const navbarLinksContainer = navbar.querySelector(".navbar-links");
+
+    navbarLinksContainer.addEventListener("click", (clickEvent) => {
+        clickEvent.stopPropagation();
+    });
+
+    navbarMenu.addEventListener("click", closeMobileNavbar);
+</script>
+
 </html>
