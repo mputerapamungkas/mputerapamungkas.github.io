@@ -257,14 +257,10 @@ body {
   width: 100%;
 }
 
-.me {
-  margin-top: -90px;
-}
-
 .me > h2 {
   font-family: 'Nunito';
   font-size: 2em;
-  margin-bottom: 15px;
+  margin-bottom: 1px;
 }
 
 .me > p {
